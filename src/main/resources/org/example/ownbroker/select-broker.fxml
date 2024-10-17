@@ -17,21 +17,21 @@
         </padding>
 
         <!-- Welcome Label -->
-        <Label fx:id="welcomeText" text="Welcome to OwnBroker!" style="-fx-font-size: 24px;">
+        <Label fx:id="selectYourBroker" text="Select your own Broker" style="-fx-font-size: 24px;">
             <VBox.margin>
                 <Insets top="-10.0"/>
             </VBox.margin>
         </Label>
 
         <!-- Invest Button -->
-        <Button text="Manage your Profiles" onAction="#onManageProfileClick" prefWidth="180.0" prefHeight="55.0">
+        <Button text="Trading212" onAction="#onTrading212Click" prefWidth="180.0" prefHeight="55.0">
             <VBox.margin>
                 <Insets top="40.0"/>
             </VBox.margin>
         </Button>
 
         <!-- CFD Button -->
-        <Button text="Create a new Profile" onAction="#onCreateProfileClick" prefWidth="180.0" prefHeight="55.0">
+        <Button text="(WIP)Interactive Broker" prefWidth="180.0" prefHeight="55.0">
             <VBox.margin>
                 <Insets top="15.0"/>
             </VBox.margin>

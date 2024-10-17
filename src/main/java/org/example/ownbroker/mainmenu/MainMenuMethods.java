@@ -4,111 +4,118 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.Node;
+import javafx.scene.chart.LineChart;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.application.Platform;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
-import javafx.util.Duration;
+
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Objects;
-import java.util.Scanner;
-import org.json.JSONObject;
 
 public class MainMenuMethods {
 
-    // LineChart for stock prices
-    @FXML
-    private LineChart<Number, Number> stockChart;
+    public TextField profileName;
+    public TextField apiKeyField;
 
-    // Series for holding chart data points
-    private XYChart.Series<Number, Number> series;
+    public Label selectYourBroker;
+    public Label selectInvestCFD;
+    public Label welcomeText;
 
-    // Counter for the time axis in the chart
-    private int time = 0;
-
-    // Finnhub API key and stock symbol
-    private final String apiKey = "cs7gj59r01qtqcar4900cs7gj59r01qtqcar490g";
-    private final String stockSymbol = "NVDA";  // Replace with your desired stock
-
-    // Initialize method that gets called automatically after the FXML is loaded
-    public void initialize() {
-        // Initialize the series for chart data
-        series = new XYChart.Series<>();
-        stockChart.getData().add(series); // Add the series to the chart
-
-        // Timeline for continuously fetching stock data
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), event -> {
-            fetchStockPrice();  // Fetch stock price every 5 seconds
-        }));
-        timeline.setCycleCount(Timeline.INDEFINITE);  // Repeat indefinitely
-        timeline.play();  // Start the timeline
-    }
-
-    // Fetch the stock price from Finnhub API
-    private void fetchStockPrice() {
-        // Start a new thread to fetch data asynchronously
-        new Thread(() -> {
-            try {
-                // Finnhub API URL for stock quote
-                String urlString = "https://finnhub.io/api/v1/quote?symbol=" + stockSymbol + "&token=" + apiKey;
-                URL url = new URL(urlString);
-                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                conn.setRequestMethod("GET");
-
-                // Read the response from the API
-                Scanner scanner = new Scanner(url.openStream());
-                StringBuilder inline = new StringBuilder();
-                while (scanner.hasNext()) {
-                    inline.append(scanner.nextLine());
-                }
-                scanner.close();
-
-                // Parse the JSON response to get the current price
-                JSONObject data = new JSONObject(inline.toString());
-                double currentPrice = data.getDouble("c");  // "c" is the current price in the API response
-
-                // Update the chart on the JavaFX Application Thread
-                Platform.runLater(() -> updateChart(currentPrice));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }).start();
-    }
-
-    // Method to update the chart with new stock price data
-    private void updateChart(double price) {
-        // Add the new data point (time, price) to the series
-        series.getData().add(new XYChart.Data<>(time++, price));
-
-        // Keep the chart data size to the last 30 points
-        if (series.getData().size() > 30) {
-            series.getData().remove(0);
-        }
-    }
-
-    // Load the Main Menu
+    // Main Menu where the user can decide to manage or create a new Profile
     @FXML
     protected static void mainMenu() throws IOException {
+        // Load the select broker window
         FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/main-menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        scene.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+        Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
+
+        // Apply the same stylesheet
+        mainMenu.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+        // Set the new scene (main menu window) in the same stage
         Stage stage = new Stage();
+        stage.setScene(mainMenu);
         stage.setTitle("Main Menu");
-        stage.setScene(scene);
         stage.show();
+    }
+
+    // Back to the Main Menu
+    @FXML
+    protected void onReturnToMainMenuClick(ActionEvent event) throws IOException {
+        // Load the main menu FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/main-menu.fxml"));
+        Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
+
+        // Apply the same stylesheet
+        mainMenu.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+        // Get the current stage (reuse the existing stage, don't create a new one)
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene (main menu window) in the same stage
+        currentStage.setScene(mainMenu);
+        currentStage.setTitle("Main Menu");
+    }
+
+    // Opens the saved Profiles
+    @FXML
+    protected void onManageProfileClick(ActionEvent event) throws IOException {
+        // Load the select broker window
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/profile-manager.fxml"));
+        Scene profileManager = new Scene(fxmlLoader.load(), 800, 600);
+
+        // Apply the same stylesheet
+        profileManager.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+        // Get the current stage
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene (main menu window) in the same stage
+        currentStage.setScene(profileManager);
+        currentStage.setTitle("Profile Manager");
+    }
+
+    // Prompt the user to select their broker
+    @FXML
+    protected void onCreateProfileClick(ActionEvent event) throws IOException {
+        // Load the select broker window
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/select-broker.fxml"));
+        Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
+
+        // Apply the same stylesheet
+        mainMenu.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+        // Get the current stage
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene (main menu window) in the same stage
+        currentStage.setScene(mainMenu);
+        currentStage.setTitle("Select your Broker");
+    }
+
+    // When the user chooses Trading212
+    @FXML
+    protected void onTrading212Click(ActionEvent event) throws IOException {
+        // Load the Invest window
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/select-cfd-invest.fxml"));
+        Scene trading212 = new Scene(fxmlLoader.load(), 800, 600);
+
+        // Apply the same stylesheet
+        trading212.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+        // Get the current stage
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene (main menu window) in the same stage
+        currentStage.setScene(trading212);
+        currentStage.setTitle("Select Invest or CFD");
     }
 
     // Handle the event when the "Invest" button is clicked
     @FXML
     protected void onInvestButtonClick(ActionEvent event) throws IOException {
         // Load the Invest window
-        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/invest-window.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/type-user-api-key.fxml"));
         Scene investScene = new Scene(fxmlLoader.load(), 800, 600);
 
         // Apply the same stylesheet
@@ -120,5 +127,62 @@ public class MainMenuMethods {
         // Set the new scene (Invest window) in the same stage
         currentStage.setScene(investScene);
         currentStage.setTitle("Invest Window");
+    }
+
+    // Handle the API key submission
+    @FXML
+    protected void onSubmitApiClick(ActionEvent event) throws IOException {
+        String apiKey = apiKeyField.getText();  // Get the API key from the text field
+        if (apiKey != null && !apiKey.isEmpty()) {
+            // Save the API key
+            saveApiKey(apiKey);
+
+            // Transition to the main menu or invest window after submission
+            FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/type-user-name.fxml"));
+            Scene mainMenuScene = new Scene(fxmlLoader.load(), 800, 600);
+
+            // Apply the same stylesheet
+            mainMenuScene.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+            // Get the current stage and set the new scene
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.setScene(mainMenuScene);
+            currentStage.setTitle("Enter your API Key");
+        } else {
+            // Show some error or prompt the user to enter a valid API key
+            System.out.println("Please enter a valid API key.");
+        }
+    }
+
+    // Handle the ProfileName submission
+    @FXML
+    protected void onSubmitNameClick(ActionEvent event) throws IOException {
+        String profileNameText = profileName.getText();  // Get the Profile Name from the text field
+        if (profileNameText != null && !profileNameText.isEmpty()) {
+            // Save the API key
+            saveApiKey(profileNameText);
+
+            // Transition to the main menu or invest window after submission
+            FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/invest-window.fxml"));
+            Scene mainMenuScene = new Scene(fxmlLoader.load(), 800, 600);
+
+            // Apply the same stylesheet
+            mainMenuScene.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+            // Get the current stage and set the new scene
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.setScene(mainMenuScene);
+            currentStage.setTitle("Enter a Profile Name");
+        } else {
+            // Show some error or prompt the user to enter a valid API key
+            System.out.println("Please enter a valid API key.");
+        }
+    }
+
+    // Save the user's API key
+    private void saveApiKey(String apiKey) {
+        // Here you can store the API key, e.g., write it to a file, database, or keep it in memory
+        System.out.println("API Key saved: " + apiKey);
+        // For example, saving to a file could be implemented here
     }
 }
