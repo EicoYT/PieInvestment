@@ -1,0 +1,33 @@
+/* CSS file: style.css */
+
+/* Style for the entire scene */
+.root {
+    -fx-background-color: rgb(0, 19, 40); /* Background color for the entire window */
+}
+
+/* Style for all buttons */
+.button {
+    -fx-font-size: 16px;         /* Button font size */
+    -fx-text-fill: rgb(255, 255, 255);      /* Button text color */
+    -fx-background-color: rgb(0, 32, 66); /* Button background color */
+    -fx-background-radius: 10px; /* Rounded corners */
+    -fx-padding: 10px;           /* Padding inside the button */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    -fx-background-color: rgb(0, 36, 74); /* Darken the button on hover */
+}
+
+/* Style for all labels */
+.label {
+    -fx-text-fill: rgb(255, 255, 255);      /* Text color for labels */
+    -fx-font-size: 18px;         /* Font size for labels */
+}
+
+/* Style for welcome text specifically */
+#welcomeText {
+    -fx-font-size: 24px;         /* Larger font size for welcome text */
+    -fx-font-weight: bold;       /* Make it bold */
+    -fx-text-fill: rgb(255, 255, 255);      /* Gold color for welcome text */
+}
