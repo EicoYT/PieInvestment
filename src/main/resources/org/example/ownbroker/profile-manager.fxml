@@ -21,7 +21,7 @@
 
     <!-- Centered section for the welcome text -->
     <VBox alignment="CENTER" BorderPane.alignment="CENTER">
-        <Label fx:id="welcomeText" text="Welcome to your profile manager" style="-fx-font-size: 24px;"/>
+        <Label fx:id="welcomeText" text="Welcome to your profile manager" style="-fx-font-size: 24px; -fx-text-fill: white;"/>
     </VBox>
 
 </BorderPane>

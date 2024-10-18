@@ -11,6 +11,7 @@ module org.example.ownbroker {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires org.json;
+    requires com.google.gson;
 
 
     opens org.example.ownbroker to javafx.fxml;

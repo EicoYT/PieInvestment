@@ -7,6 +7,10 @@ import java.io.IOException;
 public class MainCode extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        // Load profiles when the application starts
+        MainMenuMethods.loadProfiles();
+
+        // Continue to the main menu
         MainMenuMethods.mainMenu();
     }
 

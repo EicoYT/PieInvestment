@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31682139-6442-41f5-b9cb-1735ab9769fb" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/profile-manager.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/select-broker.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/select-cfd-invest.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/type-user-api-key.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/type-user-name.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ownbroker/mainmenu/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ownbroker/mainmenu/MainCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ownbroker/mainmenu/MainCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ownbroker/mainmenu/MainMenuMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ownbroker/mainmenu/MainMenuMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/invest-window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/invest-window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/main-menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/profile-manager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/profile-manager.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/select-cfd-invest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ownbroker/select-account-type.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,20 +22,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EicoYT/Own-Broker.git",
-    "accountId": "18d1672c-9111-424d-beee-cd924e29c182"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EicoYT&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EicoYT/Own-Broker.git&quot;,
+    &quot;accountId&quot;: &quot;18d1672c-9111-424d-beee-cd924e29c182&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -105,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729159059604</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test">
+      <option name="closed" value="true" />
+      <created>1729170862140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729170862140</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
