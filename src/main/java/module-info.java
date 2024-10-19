@@ -10,8 +10,8 @@ module org.example.ownbroker {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
-    requires org.json;
     requires com.google.gson;
+    requires org.json;
 
 
     opens fxmlFiles to javafx.fxml;
