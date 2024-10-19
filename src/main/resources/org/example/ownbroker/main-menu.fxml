@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="org.example.ownbroker.mainmenu.MainMenuMethods">
+           fx:controller="org.example.pieinvestment.mainmenu.MainMenuMethods">
 
     <!-- VBox for the main menu content, placed in front of the chart -->
     <VBox alignment="CENTER" spacing="15.0">
@@ -17,21 +17,21 @@
         </padding>
 
         <!-- Welcome Label -->
-        <Label fx:id="welcomeText" text="Welcome to OwnBroker!" style="-fx-font-size: 24px;">
+        <Label fx:id="welcomeText" text="Welcome to Investment Pie Creator" style="-fx-font-size: 24px;">
             <VBox.margin>
                 <Insets top="-10.0"/>
             </VBox.margin>
         </Label>
 
         <!-- Invest Button -->
-        <Button text="Manage your Profiles" onAction="#onManageProfileClick" prefWidth="180.0" prefHeight="55.0">
+        <Button text="Manage your saved Pies" onAction="#onProfileManagerClick" prefWidth="200.0" prefHeight="55.0">
             <VBox.margin>
                 <Insets top="40.0"/>
             </VBox.margin>
         </Button>
 
         <!-- CFD Button -->
-        <Button text="Create a new Profile" onAction="#onCreateProfileClick" prefWidth="180.0" prefHeight="55.0">
+        <Button text="Create a new Pie" prefWidth="200.0" prefHeight="55.0">
             <VBox.margin>
                 <Insets top="15.0"/>
             </VBox.margin>

@@ -158,7 +158,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.ownbroker/org.example.ownbroker.mainmenu.MainCode</mainClass>
+                            <mainClass>org.example.ownbroker/org.example.pieinvestment.mainmenu.MainCode</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

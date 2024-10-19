@@ -15,6 +15,6 @@ module org.example.ownbroker {
 
 
     opens org.example.ownbroker to javafx.fxml;
-    exports org.example.ownbroker.mainmenu;
-    opens org.example.ownbroker.mainmenu to javafx.fxml;
+    exports org.example.pieinvestment.mainmenu;
+    opens org.example.pieinvestment.mainmenu to javafx.fxml;
 }
