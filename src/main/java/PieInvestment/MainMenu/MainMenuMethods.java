@@ -1,10 +1,11 @@
-package org.example.pieinvestment.mainmenu;
+package PieInvestment.MainMenu;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
@@ -14,13 +15,14 @@ import java.util.Objects;
 public class MainMenuMethods {
 
     public Label welcomeText;
+    public VBox stockContainer;
 
     // Main Menu where the user can decide to manage or create a new Profile
     @FXML
     protected static void mainMenu() throws IOException {
 
         // Load the select broker window
-        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/main-menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/fxmlFiles/main-menu.fxml"));
         Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
 
         // Apply the same stylesheet
@@ -37,7 +39,7 @@ public class MainMenuMethods {
     @FXML
     protected void onReturnToMainMenuClick(ActionEvent event) throws IOException {
         // Load the main menu FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/main-menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/fxmlFiles/main-menu.fxml"));
         Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
 
         // Apply the same stylesheet
@@ -55,7 +57,7 @@ public class MainMenuMethods {
     @FXML
     protected void onProfileManagerClick(ActionEvent event) throws IOException {
         // Load the main menu FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/org/example/ownbroker/saved-pies-manager.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/fxmlFiles/saved-pies-manager.fxml"));
         Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
 
         // Apply the same stylesheet

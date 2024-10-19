@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.StackPane?>
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="org.example.pieinvestment.mainmenu.MainMenuMethods">
+           fx:controller="PieInvestment.MainMenu.MainMenuMethods">
 
     <!-- Top-left corner for the "Main Menu" button -->
     <VBox alignment="TOP_CENTER" spacing="20.0">

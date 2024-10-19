@@ -14,7 +14,7 @@ module org.example.ownbroker {
     requires com.google.gson;
 
 
-    opens org.example.ownbroker to javafx.fxml;
-    exports org.example.pieinvestment.mainmenu;
-    opens org.example.pieinvestment.mainmenu to javafx.fxml;
+    opens fxmlFiles to javafx.fxml;
+    exports PieInvestment.MainMenu;
+    opens PieInvestment.MainMenu to javafx.fxml;
 }

@@ -1,4 +1,4 @@
-package org.example.pieinvestment.mainmenu;
+package PieInvestment.MainMenu;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
