@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31682139-6442-41f5-b9cb-1735ab9769fb" name="Changes" comment="Changed Names">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxmlFiles/pie-chart-creator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxmlFiles/pie-chart-creator.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="31682139-6442-41f5-b9cb-1735ab9769fb" name="Changes" comment="Newer Maven for newer JavaFX" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,12 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729374969894</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Newer Maven for newer JavaFX">
+      <option name="closed" value="true" />
+      <created>1729376315049</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729376315049</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="Changed Names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Names" />
+    <MESSAGE value="Newer Maven for newer JavaFX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Newer Maven for newer JavaFX" />
   </component>
 </project>
