@@ -17,4 +17,7 @@ module org.example.ownbroker {
     opens fxmlFiles to javafx.fxml;
     exports PieInvestment.MainMenu;
     opens PieInvestment.MainMenu to javafx.fxml;
+
+    exports PieInvestment.CreatePies;
+    opens PieInvestment.CreatePies to javafx.fxml;
 }

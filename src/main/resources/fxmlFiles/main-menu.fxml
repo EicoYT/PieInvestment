@@ -31,7 +31,7 @@
         </Button>
 
         <!-- CFD Button -->
-        <Button text="Create a new Pie" prefWidth="200.0" prefHeight="55.0">
+        <Button text="Create a new Pie" onAction="#onCreatePieChartClick" prefWidth="200.0" prefHeight="55.0">
             <VBox.margin>
                 <Insets top="15.0"/>
             </VBox.margin>

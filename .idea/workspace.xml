@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31682139-6442-41f5-b9cb-1735ab9769fb" name="Changes" comment="Newer Maven for newer JavaFX" />
+    <list default="true" id="31682139-6442-41f5-b9cb-1735ab9769fb" name="Changes" comment="removed not needed file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/PieInvestment/CreatePies/CreatePiesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PieInvestment/CreatePies/Pie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PieInvestment/CreatePies/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PieInvestment/CreatePies/CreatePies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PieInvestment/CreatePies/CreatePies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PieInvestment/MainMenu/MainMenuMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PieInvestment/MainMenu/MainMenuMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxmlFiles/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxmlFiles/main-menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxmlFiles/pie-chart-creator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxmlFiles/pie-chart-creator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxmlFiles/saved-pies-manager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxmlFiles/saved-pies-manager.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -28,12 +39,12 @@
     &quot;assignee&quot;: &quot;EicoYT&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EicoYT/PieInvestment.git",
-    "accountId": "18d1672c-9111-424d-beee-cd924e29c182"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EicoYT/PieInvestment.git&quot;,
+    &quot;accountId&quot;: &quot;18d1672c-9111-424d-beee-cd924e29c182&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -56,24 +67,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.MainCode.executor": "Run",
-    "Maven.OwnBroker [clean,install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files (x86)/javafx-sdk-21.0.5/lib/javafx.swing.jar",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3912265",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainCode.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.OwnBroker [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/javafx-sdk-21.0.5/lib/javafx.swing.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3912265&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Fabio\OneDrive\Ordner\Privat\Programmieren\Intellij Projects\Working\PieInvestment\src\main\resources\fxmlFiles" />
@@ -152,13 +163,22 @@
       <option name="project" value="LOCAL" />
       <updated>1729376315049</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="removed not needed file">
+      <option name="closed" value="true" />
+      <created>1729376661884</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729376661884</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="Changed Names" />
     <MESSAGE value="Newer Maven for newer JavaFX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Newer Maven for newer JavaFX" />
+    <MESSAGE value="removed not needed file" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed not needed file" />
   </component>
 </project>

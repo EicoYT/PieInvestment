@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="PieInvestment.MainMenu.MainMenuMethods">
-
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PieInvestment.CreatePies.CreatePiesController">
     <Label text="Pie Chart Creation" />
 
     <!-- Buttons to add and remove stocks -->
-    <Button text="Add Stock"/>
-    <Button text="Remove Stock"/>
+    <Button text="Add Stock" onAction="#addStock" />
+    <Button text="Remove Stock" onAction="#removeStock" />
 
     <!-- Container to hold dynamically added stocks -->
     <VBox fx:id="stockContainer" spacing="10"/>
-</StackPane>
+
+    <!-- Button to show the pie chart -->
+    <Button text="Show Pie Chart" onAction="#showPieChart" />
+
+    <!-- Button to go back to the main menu -->
+    <Button text="Back to Main Menu" onAction="#goBackToMainMenu" />
+</VBox>
