@@ -1,6 +1,10 @@
 package PieInvestment.CreatePies;
 
+import PieInvestment.MainMenu.MainCode;
+import PieInvestment.MainMenu.MainMenuMethods;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
@@ -60,30 +64,28 @@ public class CreatePiesController {
             pieChart.getData().add(new PieChart.Data(stock, percentage));
         }
 
-        Stage chartStage = new Stage();
         VBox chartLayout = new VBox(pieChart);
         Stage newStage = new Stage();
         newStage.setScene(new Scene(chartLayout, 400, 400));
         newStage.show();
     }
 
-    // Go back to the main menu
+    // Back to the Main Menu
     @FXML
-    public void goBackToMainMenu() {
-        try {
-            // Load the main menu
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/investmentpiefxml/main_menu.fxml"));
-            VBox mainMenuRoot = fxmlLoader.load();
+    protected void onReturnToMainMenuClick(ActionEvent event) throws IOException {
+        // Load the main menu FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(MainCode.class.getResource("/fxmlFiles/main-menu.fxml"));
+        Scene mainMenu = new Scene(fxmlLoader.load(), 800, 600);
 
-            // Get the current stage (the window) and set the new scene
-            Stage stage = (Stage) stockContainer.getScene().getWindow();  // Get the current stage
-            Scene mainMenuScene = new Scene(mainMenuRoot);
-            // Create the scene and apply CSS
-            mainMenuScene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/style.css")).toExternalForm());
-            stage.setScene(mainMenuScene);  // Set the new scene
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Apply the same stylesheet
+        mainMenu.getStylesheets().add(Objects.requireNonNull(MainMenuMethods.class.getResource("/css/style.css")).toExternalForm());
+
+        // Get the current stage (reuse the existing stage, don't create a new one)
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene (main menu window) in the same stage
+        currentStage.setScene(mainMenu);
+        currentStage.setTitle("Main Menu");
     }
 }
 
